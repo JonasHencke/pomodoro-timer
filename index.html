@@ -1,14 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
+  <link rel="stylesheet" href="main.scss" />
   <body>
-    <div id="app"></div>
-    <div class="h1">TEST</div>
-    <script type="module" src="/main.js"></script>
+    <div class="" id="app">
+      <div
+        class="d-flex flex-column align-items-center justify-content-center vh-100 gap-4"
+      >
+        <div class="buttongroup d-flex gap-3">
+          <button class="btn btn-primary rounded-3">Start</button>
+          <button class="btn btn-primary rounded-3">Pause</button>
+          <button class="btn btn-primary rounded-3">Cancel</button>
+        </div>
+        <div class="timer display-1 fw-bold">24:59</div>
+        <div class="buttongroup d-flex gap-3">
+          <button class="btn btn-primary rounded-3">Settings</button>
+          <button class="btn btn-primary rounded-3">Reset</button>
+        </div>
+      </div>
+    </div>
   </body>
+  <script type="module" src="/main.js"></script>
 </html>
