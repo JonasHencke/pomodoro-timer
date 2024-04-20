@@ -1,4 +1,8 @@
-$primary: #71A57D;
-$secondary: #3F714C;
+$primary: white;
+$secondary: #5d3e5d;
+$btn-font-size: calc(0.5rem + 2vw);
 
+$display-font-sizes: (
+  1: 8.5rem
+) !default;
 @import "../node_modules/bootstrap/scss/bootstrap";
