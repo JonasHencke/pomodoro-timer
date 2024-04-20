@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Studytimer</title>
   </head>
   <link rel="stylesheet" href="main.scss" />
   <body class="bg-secondary">
     <div class="" id="app">
-      <div
-        class="d-flex flex-column align-items-center justify-content-center vh-100 gap-4"
-      >
+      <div class="d-flex flex-column align-items-center justify-content-center vh-100 gap-4">
         <div class="buttongroup d-flex gap-3">
-          <button class="btn btn-primary rounded-3">Start</button>
-          <button class="btn btn-primary rounded-3">Pause</button>
-          <button class="btn btn-primary rounded-3">Cancel</button>
+          <button class="btn btn-primary rounded-3" id="startBtn">Start</button>
+          <button class="btn btn-primary rounded-3" id="pauseBtn">Pause</button>
+          <button class="btn btn-primary rounded-3" id="cancelBtn">Cancel</button>
         </div>
-        <div class="timer display-1 fw-bold">24:59</div>
+        <div class="timer display-1 fw-bold" id="timer">25:00</div>
         <div class="buttongroup d-flex gap-3">
           <button class="btn btn-primary rounded-3">Settings</button>
           <button class="btn btn-primary rounded-3">Reset</button>
@@ -24,5 +22,6 @@
       </div>
     </div>
   </body>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./js/main.js">
+  </script>
 </html>
