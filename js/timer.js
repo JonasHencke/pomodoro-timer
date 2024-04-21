@@ -2,6 +2,10 @@ export let timer;
 export let minutes = 25;
 export let seconds = 0;
 export let isPaused = true;
+let timeSelected = 'pomodoro';
+export let pomodoroLength = 25;
+export let shortBreakLength = 5;
+export let longBreakLength = 15
 
 export function startTimer() {
     if (isPaused) {
@@ -18,7 +22,7 @@ export function pauseTimer() {
 export function resetTimer() {
     isPaused = true;
     clearInterval(timer);
-    minutes = 25;
+    minutes = timeSelected;
     seconds = 0;
     updateDisplay();
 }
@@ -35,6 +39,24 @@ export function updateTimer() {
     }
 
     updateDisplay();
+}
+
+export function changeSelectedTime(length) {
+    pauseTimer();
+    timeSelected = length;
+    seconds = 0;
+
+    // switch statement draus machen
+    if(length === pomodoroLength) {
+        document.querySelector('#timer').innerText = `${pomodoroLength}:00`;
+        minutes = pomodoroLength;
+    } else if (length === longBreakLength) {
+        document.querySelector('#timer').innerText = `${longBreakLength}:00`;
+        minutes = longBreakLength;
+    } else if (length === shortBreakLength) {
+        document.querySelector('#timer').innerText = `${shortBreakLength}:00`;
+        minutes = shortBreakLength;
+    }
 }
 
 export function updateDisplay() {
