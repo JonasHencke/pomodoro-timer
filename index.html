@@ -7,7 +7,7 @@
     <title>Studytimer</title>
   </head>
   <link rel="stylesheet" href="main.scss" />
-  <body class="bg-secondary">
+  <body class="bg-secondary position-relative">
     <div class="" id="app">
       <div class="d-flex flex-column align-items-center justify-content-center vh-100 gap-4">
         <div class="buttongroup d-flex gap-3" id="selectBtns">
@@ -18,12 +18,12 @@
         <div class="timer display-1 fw-bold text-primary fw-bold" id="timer">25:00</div>
         <div class="buttongroup d-flex gap-4 align-items-center">
           <div class="fa-solid fa-play" id="playBtn" style="font-size:calc(2rem + 2vw)"></div>
-          <div class="fa-solid fa-pause" id="pauseBtn" style="font-size:calc(2rem + 2vw)"></div>
+          <div class="fa-solid fa-pause d-none" id="pauseBtn" style="font-size:calc(2rem + 2vw)"></div>
           <div class="fa-solid fa-arrows-rotate" id="cancelBtn" style="font-size:calc(2rem + 1vw)"></div>
-          <div class="fa-solid fa-gear" id="settingsBtn" style="font-size:calc(2rem + 1vw)"></div>
         </div>
       </div>
     </div>
+    <div class="fa-solid fa-gear position-absolute" id="settingsBtn" style="font-size:calc(1.4em + 2vw);top:4vh;right:3vw;"></div>
   </body>
   <script type="module" src="./js/main.js">
   </script>

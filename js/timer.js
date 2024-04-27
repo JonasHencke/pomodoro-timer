@@ -2,7 +2,7 @@ export let timer;
 export let minutes = 25;
 export let seconds = 0;
 export let isPaused = true;
-let timeSelected = 'pomodoro';
+let timeSelected = 25;
 export let pomodoroLength = 25;
 export let shortBreakLength = 5;
 export let longBreakLength = 15
@@ -11,12 +11,16 @@ export function startTimer() {
     if (isPaused) {
         isPaused = false;
         timer = setInterval(updateTimer, 1000);
+        document.querySelector("#playBtn").classList.add('d-none');
+        document.querySelector("#pauseBtn").classList.remove('d-none');
     }
 }
 
 export function pauseTimer() {
     isPaused = true;
     clearInterval(timer);
+    document.querySelector("#pauseBtn").classList.add('d-none');
+    document.querySelector("#playBtn").classList.remove('d-none');
 }
 
 export function resetTimer() {
@@ -25,6 +29,8 @@ export function resetTimer() {
     minutes = timeSelected;
     seconds = 0;
     updateDisplay();
+    document.querySelector("#pauseBtn").classList.add('d-none');
+    document.querySelector("#playBtn").classList.remove('d-none');
 }
 
 export function updateTimer() {
