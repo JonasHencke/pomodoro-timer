@@ -45,22 +45,14 @@ export function changeSelectedTime(length) {
     pauseTimer();
     timeSelected = length;
     seconds = 0;
+    minutes = length;
 
-    // switch statement draus machen
-    if(length === pomodoroLength) {
-        document.querySelector('#timer').innerText = `${pomodoroLength}:00`;
-        minutes = pomodoroLength;
-    } else if (length === longBreakLength) {
-        document.querySelector('#timer').innerText = `${longBreakLength}:00`;
-        minutes = longBreakLength;
-    } else if (length === shortBreakLength) {
-        document.querySelector('#timer').innerText = `${shortBreakLength}:00`;
-        minutes = shortBreakLength;
-    }
+    updateDisplay();
 }
 
 export function updateDisplay() {
     const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
     const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
     document.getElementById('timer').innerText = `${formattedMinutes}:${formattedSeconds}`;
+    document.title = `${formattedMinutes}:${formattedSeconds} | Studytimer`;
 };
