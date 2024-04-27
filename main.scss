@@ -1,8 +1,16 @@
-$primary: white;
+$primary: rgb(210, 210, 210);
 $secondary: #5d3e5d;
 $btn-font-size: calc(0.65rem + 1vw);
+$white: $primary;
 
 $display-font-sizes: (
   1: 7.75rem
 ) !default;
+
+body {
+  background: no-repeat fixed 25% 100% url("https://wallpapers.com/images/featured/dark-forest-shsyax3tzax42p9o.jpg");
+  background-size: cover;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
