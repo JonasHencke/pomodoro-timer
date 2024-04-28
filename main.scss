@@ -4,7 +4,7 @@ $btn-font-size: calc(0.65rem + 1vw);
 $white: $primary;
 
 $display-font-sizes: (
-  1: 7.75rem
+  1: 8.5rem
 ) !default;
 
 body {
@@ -14,3 +14,11 @@ body {
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.btn-outline-primary {
+  --bs-btn-bg: rgba(0, 0, 0, 0.65);
+}
+
+#timer {
+  font-family: "Azeret Mono", monospace;
+  letter-spacing: -0.2rem;
+}
