@@ -35,8 +35,7 @@ export function resetTimer() {
 
 export function updateTimer() {
     if (minutes === 0 && seconds === 0) {
-        // Pomodoro phase is over, reset timer for the break
-        minutes = 5;
+        resetTimer();
     } else if (seconds === 0) {
         minutes--;
         seconds = 59;
@@ -47,6 +46,13 @@ export function updateTimer() {
     updateDisplay();
 }
 
+export function updateDisplay() {
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+    const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+    document.getElementById('timer').innerText = `${formattedMinutes}:${formattedSeconds}`;
+    document.title = `${formattedMinutes}:${formattedSeconds} | Studytimer`;
+};
+
 export function changeSelectedTime(length) {
     pauseTimer();
     timeSelected = length;
@@ -55,10 +61,3 @@ export function changeSelectedTime(length) {
 
     updateDisplay();
 }
-
-export function updateDisplay() {
-    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
-    const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
-    document.getElementById('timer').innerText = `${formattedMinutes}:${formattedSeconds}`;
-    document.title = `${formattedMinutes}:${formattedSeconds} | Studytimer`;
-};
