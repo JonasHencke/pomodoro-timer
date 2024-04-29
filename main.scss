@@ -22,3 +22,7 @@ body {
   font-family: "Azeret Mono", monospace;
   letter-spacing: -0.2rem;
 }
+
+.fa-play, .fa-pause {
+  width: calc(3rem + 1vw);
+}
