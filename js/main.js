@@ -19,7 +19,10 @@ const shortBreak = document.querySelector("#shortBreak");
 // timer-button-group functionality
 playBtn.addEventListener("click", startTimer);
 pauseBtn.addEventListener("click", pauseTimer);
-cancelBtn.addEventListener("click", resetTimer);
+cancelBtn.addEventListener("click", () => {
+  resetTimer();
+  cancelBtn.classList.toggle('rotate360');
+});
 
 // length-button-group functionality
 pomodoroBtn.addEventListener("click", () => {

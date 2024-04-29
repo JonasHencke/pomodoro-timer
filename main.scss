@@ -26,3 +26,11 @@ body {
 .fa-play, .fa-pause {
   width: calc(3rem + 1vw);
 }
+
+.fa-arrows-rotate {
+  transition: 750ms;
+}
+
+.rotate360 {
+  transform: rotate(360deg);
+}
