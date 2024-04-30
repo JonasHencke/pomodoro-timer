@@ -5,7 +5,8 @@ export let isPaused = true;
 let timeSelected = 25;
 export let pomodoroLength = 25;
 export let shortBreakLength = 5;
-export let longBreakLength = 15
+export let longBreakLength = 15;
+let Ringtone = new Audio('ringtones/notification_sound.mp3');
 
 export function startTimer() {
     if (isPaused) {
@@ -35,6 +36,7 @@ export function resetTimer() {
 
 export function updateTimer() {
     if (minutes === 0 && seconds === 0) {
+        playAudio();
         resetTimer();
     } else if (seconds === 0) {
         minutes--;
@@ -60,4 +62,8 @@ export function changeSelectedTime(length) {
     minutes = length;
 
     updateDisplay();
+}
+
+function playAudio() {
+    Ringtone.play();
 }
