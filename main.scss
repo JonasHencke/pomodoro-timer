@@ -36,3 +36,8 @@ body {
 .transformX {
   transform: translateX(260px)
 }
+html, body {
+  background-color: black;
+  max-width: 100vw;
+  overflow: hidden;
+}
