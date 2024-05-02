@@ -47,3 +47,10 @@ function updateSelectBtns(selectedBtn) {
   selectedBtn.classList.add("btn-primary");
   selectedBtn.classList.remove("btn-outline-primary");
 }
+
+//playlist functionality
+
+let playlistContainer = document.querySelector('#playlistContainer');
+playlistContainer.addEventListener('click', () => {
+  playlistContainer.classList.toggle('transformX')
+})

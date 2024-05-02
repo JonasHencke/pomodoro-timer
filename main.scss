@@ -30,7 +30,9 @@ body {
 .fa-arrows-rotate {
   transition: 750ms;
 }
-
 .rotate360 {
   transform: rotate(360deg);
+}
+.transformX {
+  transform: translateX(260px)
 }
