@@ -52,5 +52,5 @@ function updateSelectBtns(selectedBtn) {
 
 let playlistContainer = document.querySelector('#playlistContainer');
 playlistContainer.addEventListener('click', () => {
-  playlistContainer.classList.toggle('transformX')
+  playlistContainer.classList.toggle('hideplaylist')
 })

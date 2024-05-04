@@ -33,8 +33,11 @@ body {
 .rotate360 {
   transform: rotate(360deg);
 }
-.transformX {
-  transform: translateX(260px)
+.hideplaylist > div {
+  transform: translateX(-14px);
+}
+.hideplaylist > iframe {
+  width: 0px;
 }
 html, body {
   background-color: black;
