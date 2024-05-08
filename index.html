@@ -26,11 +26,28 @@
         </div>
         <div id="playlistContainer" class="d-flex position-absolute hideplaylist" style="right:0px;bottom:3vh;transition:1000ms;">
           <div class=" display-flex fa-brands fa-spotify text-white" style="left: 390px; bottom: 5vw; border-radius: 0px; min-width:50px; height: 152px; transition: 500ms; background-color: #282828; font-size:23px; margin-right:-16px; padding-top:60px; padding-left:12px; border-radius: 0.75em 0 0 0.75em" role="button"></div>
-          <iframe class="" border-radius="0px" style="left: 0; bottom: 5vw; border-radius: 0px; transition: 500ms;" src="https://open.spotify.com/embed/playlist/1osCrUUV4UeTgYqM9oenvy?utm_source=generator&theme=0" height="200" width="260" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe class="" border-radius="0px" style="left: 0; bottom: 5vw; border-radius: 0px; transition: 300ms;" src="https://open.spotify.com/embed/playlist/1osCrUUV4UeTgYqM9oenvy?utm_source=generator&theme=0" height="200" width="260" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
     </div>
-    <div class="fa-solid fa-gear position-absolute text-white" id="settingsBtn" style="font-size:calc(1.4em + 2vw);top:4vh;right:3vw;" role="button"></div>
+    <div class="fa-solid fa-gear position-absolute text-white" id="settingsBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:calc(1.4em + 2vw);top:4vh;right:3vw;" role="button"></div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script type="module" src="./js/main.js">
   </script>

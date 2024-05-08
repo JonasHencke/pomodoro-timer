@@ -8,6 +8,8 @@ import {
   longBreakLength,
 } from "./timer.js";
 
+import 'bootstrap';
+
 // Timer buttons
 const playBtn = document.querySelector("#playBtn");
 const pauseBtn = document.querySelector("#pauseBtn");
