@@ -48,3 +48,19 @@ html, body {
 button:not(.btn-outline-primary){
 cursor:default;
 }
+
+/* Modal-classes */
+.modal-content {
+  background-color: unset;
+}
+.modal-header{
+  background-color: #191919;
+  border-radius: 3px 3px 0 0;
+}
+.modal-body {
+  background-color: var(--bs-white);
+}
+.modal-footer {
+  background-color: #191919;
+  border-radius: 0 0 3px 3px;
+}
