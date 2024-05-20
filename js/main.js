@@ -7,8 +7,9 @@ import {
   shortBreakLength,
   longBreakLength,
 } from "./timer.js";
-
 import 'bootstrap';
+import setBackground from "./background.js";
+import setPlaylist from "./playlist.js";
 
 // Timer buttons
 const playBtn = document.querySelector("#playBtn");
