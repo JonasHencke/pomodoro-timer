@@ -70,7 +70,8 @@ cursor:default;
 }
 
 .form-control,
-.form-control:focus {
+.form-control:focus,
+.form-select {
   background-color: #191919;
   color: white;
 }
