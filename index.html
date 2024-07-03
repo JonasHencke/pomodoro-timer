@@ -45,39 +45,39 @@
               <div class="d-flex justify-content-between flex-column flex-sm-row ms-auto me-auto w-75 mb-3">
                 <div>
                   <div class="fw-bold mb-1 text-white">pomodoro</div>
-                  <input class="form-control timer-input" type="number" min="1">
+                  <input id="timer-pomodoro" class="form-control timer-input" type="number" min="1">
                   <div class="opacity-75">min.</div>
                 </div>
                 <div>
                   <div class="fw-bold mb-1 text-white">short break</div>
-                  <input class="form-control timer-input" type="number" min="1">
+                  <input id="timer-short-break" class="form-control timer-input" type="number" min="1">
                   <div class="opacity-75">min.</div>
                 </div>
                 <div>
                   <div class="fw-bold mb-1 text-white">long break</div>
-                  <input class="form-control timer-input" type="number" min="1">
+                  <input id="timer-long-break" class="form-control timer-input" type="number" min="1">
                   <div class="opacity-75">min.</div>
                 </div>
               </div>
               <div class="h5">Alarm</div>
-              <select class="form-select form-select-sm w-75 ms-auto me-auto" aria-label="Small select example">
+              <select id="alarm-select" class="form-select form-select-sm w-75 ms-auto me-auto" aria-label="Small select example">
                 <option selected>Standard</option>
                 <option value="1">Ringing</option>
                 <option value="2">Bell</option>
                 <option value="3">Horn</option>
               </select>
               <div class="w-75 mt-3 ms-auto me-auto mb-3">
-                <input type="range" class="form-range" min="0" max="100" step="5">
+                <input id="volume-range" type="range" class="form-range" min="0" max="100" step="5">
               </div>
               <div class="h5">Background</div>
-              <select class="form-select form-select-sm w-75 ms-auto me-auto mb-3" aria-label="Small select example">
+              <select id="background-select" class="form-select form-select-sm w-75 ms-auto me-auto mb-3" aria-label="Small select example">
                 <option selected>Standard</option>
                 <option value="1">Ringing</option>
                 <option value="2">Bell</option>
                 <option value="3">Horn</option>
               </select>
               <div class="h5">Playlist</div>
-              <select class="form-select form-select-sm w-75 ms-auto me-auto mb-3" aria-label="Small select example">
+              <select id="playlist-select" class="form-select form-select-sm w-75 ms-auto me-auto mb-3" aria-label="Small select example">
                 <option selected>Standard</option>
                 <option value="1">Ringing</option>
                 <option value="2">Bell</option>
@@ -87,12 +87,12 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary rounded-4" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn rounded-4 btn-outline-primary">Save changes</button>
+            <button id="save-button" type="button" class="btn rounded-4 btn-outline-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal end -->
+    <!-- Bootstrap Modal end -->
   </body>
   <script type="module" src="./js/main.js">
   </script>

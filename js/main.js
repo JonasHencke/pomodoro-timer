@@ -10,6 +10,7 @@ import {
 import 'bootstrap';
 import setBackground from "./background.js";
 import setPlaylist from "./playlist.js";
+import saveChanges from "./save.js";
 
 // Timer buttons
 const playBtn = document.querySelector("#playBtn");
@@ -18,6 +19,7 @@ const cancelBtn = document.querySelector("#cancelBtn");
 const pomodoroBtn = document.querySelector("#pomodoroBtn");
 const longBreak = document.querySelector("#longBreak");
 const shortBreak = document.querySelector("#shortBreak");
+const saveBtn = document.querySelector('#save-button')
 
 // timer-button-group functionality
 playBtn.addEventListener("click", startTimer);
@@ -57,3 +59,5 @@ let playlistContainer = document.querySelector('#playlistContainer');
 playlistContainer.addEventListener('click', () => {
   playlistContainer.classList.toggle('hideplaylist')
 })
+
+saveBtn.addEventListener('click', saveChanges);
