@@ -18,7 +18,7 @@
           <button class="btn rounded-4 fw-bold btn-outline-primary" id="shortBreak">short break</button>
           <button class="btn rounded-4 fw-bold btn-outline-primary" id="longBreak">long break</button>
         </div>
-        <div class="timer display-1 fw-bold text-primary fw-bold" id="timer">25:00</div>
+        <div class="timer display-1 fw-bold text-primary fw-bold" id="timer"></div>
         <div class="buttongroup d-flex gap-4 align-items-center">
           <div class="fa-solid fa-play text-white" id="playBtn" style="font-size:calc(2rem + 2vw)" role="button"></div>
           <div class="fa-solid fa-pause d-none text-white" id="pauseBtn" style="font-size:calc(2rem + 2vw)" role="button"></div>
@@ -61,7 +61,7 @@
               </div>
               <div class="h5">Alarm</div>
               <select id="alarm-select" class="form-select form-select-sm w-75 ms-auto me-auto" aria-label="Small select example">
-                <option selected>Standard</option>
+                <option value="">Standard</option>
                 <option value="1">Ringing</option>
                 <option value="2">Bell</option>
                 <option value="3">Horn</option>
@@ -71,23 +71,24 @@
               </div>
               <div class="h5">Background</div>
               <select id="background-select" class="form-select form-select-sm w-75 ms-auto me-auto mb-3" aria-label="Small select example">
-                <option selected>Standard</option>
-                <option value="1">Ringing</option>
-                <option value="2">Bell</option>
-                <option value="3">Horn</option>
+                <option value="">Standard</option>
+                <option value="gas_station">Gas station by night</option>
+                <option value="starry_night">Starry night</option>
+                <option value="virtual_reality">Virtual reality</option>
+                <option value="tokyo_tower">Tokyo tower</option>
               </select>
               <div class="h5">Playlist</div>
               <select id="playlist-select" class="form-select form-select-sm w-75 ms-auto me-auto mb-3" aria-label="Small select example">
-                <option selected>Standard</option>
-                <option value="1">Ringing</option>
-                <option value="2">Bell</option>
-                <option value="3">Horn</option>
+                <option value="">Standard</option>
+                <option value="lofi_chill">Lofi chill</option>
+                <option value="calm_piano">Calm Piano</option>
+                <option value="dark_ambience">Dark ambience</option>
               </select>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary rounded-4" data-bs-dismiss="modal">Close</button>
-            <button id="save-button" type="button" class="btn rounded-4 btn-outline-primary">Save changes</button>
+            <button id="save-button" type="button" class="btn rounded-4 btn-outline-primary" data-bs-dismiss="modal">Save changes</button>
           </div>
         </div>
       </div>

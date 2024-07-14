@@ -2,15 +2,11 @@ import {
   startTimer,
   pauseTimer,
   resetTimer,
-  changeSelectedTime,
-  pomodoroLength,
-  shortBreakLength,
-  longBreakLength,
+  changeSelectedTime
 } from "./timer.js";
 import 'bootstrap';
-import setBackground from "./background.js";
-import setPlaylist from "./playlist.js";
 import saveChanges from "./save.js";
+import pageload from "./pageload.js";
 
 // Timer buttons
 const playBtn = document.querySelector("#playBtn");
@@ -31,15 +27,15 @@ cancelBtn.addEventListener("click", () => {
 
 // length-button-group functionality
 pomodoroBtn.addEventListener("click", () => {
-    changeSelectedTime(pomodoroLength);
+    changeSelectedTime(localStorage.getItem('pomodoroLength') ? localStorage.getItem('pomodoroLength') : 25);
     updateSelectBtns(pomodoroBtn);
   });
 longBreak.addEventListener("click", () => {
-    changeSelectedTime(longBreakLength);
-    updateSelectBtns(longBreak);
+    changeSelectedTime(localStorage.getItem('longBreakLength') ? localStorage.getItem('longBreakLength') : 15);
+    updateSelectBtns();
   });
 shortBreak.addEventListener("click", () => {
-  changeSelectedTime(shortBreakLength);
+  changeSelectedTime(localStorage.getItem('shortBreakLength') ? localStorage.getItem('shortBreakLength') : 5);
   updateSelectBtns(shortBreak);
 });
 
@@ -54,10 +50,11 @@ function updateSelectBtns(selectedBtn) {
 }
 
 //playlist functionality
-
 let playlistContainer = document.querySelector('#playlistContainer');
 playlistContainer.addEventListener('click', () => {
   playlistContainer.classList.toggle('hideplaylist')
 })
 
 saveBtn.addEventListener('click', saveChanges);
+
+pageload()
