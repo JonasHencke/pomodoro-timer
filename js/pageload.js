@@ -12,6 +12,7 @@ export default function pageload() {
     document.getElementById('timer-pomodoro').value = localStorage.getItem('pomodoroLength');
     document.getElementById('timer-short-break').value = localStorage.getItem('shortBreakLength');
     document.getElementById('timer-long-break').value = localStorage.getItem('longBreakLength');
+    document.querySelector('#volume-range').value = localStorage.getItem('volume');
 
     //select options from localStorage
     document.getElementById('alarm-select').querySelector(`option[value='${localStorage.getItem('alarm')}']`).setAttribute('selected', true);

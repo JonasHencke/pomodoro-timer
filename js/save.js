@@ -18,6 +18,7 @@ export default function saveChanges() {
     localStorage.setItem('volume', volumeRange.value);
     localStorage.setItem('background', backgroundSelect.value);
     localStorage.setItem('playlist', playlistSelect.value);
+    localStorage.setItem('volume', volumeRange.value);
 
     setBackground(backgroundSelect.value);
     setPlaylist(playlistSelect.value);
