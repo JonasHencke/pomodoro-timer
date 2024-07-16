@@ -1,12 +1,14 @@
 import { changeSelectedTime } from "./timer";
 import setBackground from "./background";
 import setPlaylist from "./playlist";
+import { changeRingtoneVolume } from "./audio";
 
 
 export default function pageload() {
     changeSelectedTime(localStorage.getItem('pomodoroLength') ? localStorage.getItem('pomodoroLength') : 25);
     setBackground(localStorage.getItem('background'));
     setPlaylist(localStorage.getItem('playlist'));
+    changeRingtoneVolume(localStorage.getItem('volume'));
 
     //enter modal input values from localStorage
     document.getElementById('timer-pomodoro').value = localStorage.getItem('pomodoroLength');

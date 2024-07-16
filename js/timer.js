@@ -1,3 +1,4 @@
+import { playAudio } from "./audio";
 export let timer;
 export let minutes = 25;
 export let seconds = 0;
@@ -6,7 +7,6 @@ let timeSelected = 25;
 let pomodoroLength = localStorage.getItem('pomodoroLength') ? localStorage.getItem('pomodoroLength') : 25;
 let shortBreakLength = localStorage.getItem('shortBreakLength') ? localStorage.getItem('shortBreakLength') : 5;
 let longBreakLength = localStorage.getItem('longBreakLength') ? localStorage.getItem('longBreakLength') : 15;
-let Ringtone = new Audio('ringtones/notification_sound.mp3');
 
 export function startTimer() {
     if (isPaused) {
@@ -64,9 +64,7 @@ export function changeSelectedTime(length) {
     updateDisplay();
 }
 
-function playAudio() {
-    Ringtone.play();
-}
+
 
 export function ChangeTimerLengths(pomodoro, short, long) {
     pomodoroLength = pomodoro ? pomodoro : pomodoroLength;

@@ -1,6 +1,7 @@
 import setBackground from "./background.js";
 import setPlaylist from "./playlist.js";
 import { changeSelectedTime } from "./timer.js";
+import { changeRingtoneVolume } from "./audio.js";
 
 const timerPomodoro      = document.querySelector('#timer-pomodoro');
 const timerShortBreak   = document.querySelector('#timer-short-break');
@@ -23,4 +24,5 @@ export default function saveChanges() {
     setBackground(backgroundSelect.value);
     setPlaylist(playlistSelect.value);
     changeSelectedTime(timerPomodoro.value, timerShortBreak.value, timerLongBreak.value);
+    changeRingtoneVolume(volumeRange.value);
 }
