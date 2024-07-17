@@ -4,9 +4,9 @@ export let minutes = 25;
 export let seconds = 0;
 export let isPaused = true;
 let timeSelected = 25;
-let pomodoroLength = localStorage.getItem('pomodoroLength') ? localStorage.getItem('pomodoroLength') : 25;
-let shortBreakLength = localStorage.getItem('shortBreakLength') ? localStorage.getItem('shortBreakLength') : 5;
-let longBreakLength = localStorage.getItem('longBreakLength') ? localStorage.getItem('longBreakLength') : 15;
+let pomodoroLength = parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25;
+let shortBreakLength = parseInt(localStorage.getItem('shortBreakLength')) ? localStorage.getItem('shortBreakLength') : 5;
+let longBreakLength = parseInt(localStorage.getItem('longBreakLength')) ? localStorage.getItem('longBreakLength') : 10;
 
 export function startTimer() {
     if (isPaused) {

@@ -27,20 +27,20 @@ cancelBtn.addEventListener("click", () => {
 
 // length-button-group functionality
 pomodoroBtn.addEventListener("click", () => {
-    changeSelectedTime(localStorage.getItem('pomodoroLength') ? localStorage.getItem('pomodoroLength') : 25);
+    changeSelectedTime(parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25);
     updateSelectBtns(pomodoroBtn);
   });
 longBreak.addEventListener("click", () => {
-    changeSelectedTime(localStorage.getItem('longBreakLength') ? localStorage.getItem('longBreakLength') : 15);
-    updateSelectBtns();
+    changeSelectedTime(parseInt(localStorage.getItem('longBreakLength')) ? localStorage.getItem('longBreakLength') : 10);
+    updateSelectBtns(longBreak);
   });
 shortBreak.addEventListener("click", () => {
-  changeSelectedTime(localStorage.getItem('shortBreakLength') ? localStorage.getItem('shortBreakLength') : 5);
+  changeSelectedTime(parseInt(localStorage.getItem('shortBreakLength')) ? localStorage.getItem('shortBreakLength') : 5);
   updateSelectBtns(shortBreak);
 });
 
 // functions
-function updateSelectBtns(selectedBtn) {
+export function updateSelectBtns(selectedBtn) {
   document.querySelectorAll("#selectBtns > button").forEach((button) => {
     button.classList.add("btn-outline-primary");
     button.classList.remove("btn-primary");
