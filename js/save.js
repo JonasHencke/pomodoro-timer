@@ -4,15 +4,16 @@ import { changeSelectedTime } from "./timer.js";
 import { changeRingtoneVolume } from "./audio.js";
 import { updateSelectBtns } from "./main.js";
 
-const timerPomodoro      = document.querySelector('#timer-pomodoro');
-const timerShortBreak   = document.querySelector('#timer-short-break');
-const timerLongBreak    = document.querySelector('#timer-long-break');
-const alarmSelect       = document.querySelector('#alarm-select');
-const volumeRange       = document.querySelector('#volume-range');
-const backgroundSelect  = document.querySelector('#background-select');
-const playlistSelect    = document.querySelector('#playlist-select');
 
 export default function saveChanges() {
+    const timerPomodoro     = document.querySelector('#timer-pomodoro');
+    const timerShortBreak   = document.querySelector('#timer-short-break');
+    const timerLongBreak    = document.querySelector('#timer-long-break');
+    const alarmSelect       = document.querySelector('#alarm-select');
+    const volumeRange       = document.querySelector('#volume-range');
+    const backgroundSelect  = document.querySelector('#background-select');
+    const playlistSelect    = document.querySelector('#playlist-select');
+    
     localStorage.setItem('pomodoroLength', timerPomodoro.value);
     localStorage.setItem('shortBreakLength', timerShortBreak.value);
     localStorage.setItem('longBreakLength', timerLongBreak.value);
