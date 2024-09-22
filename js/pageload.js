@@ -1,13 +1,14 @@
 import { changeSelectedTime } from "./timer";
 import setBackground from "./background";
 import setPlaylist from "./playlist";
-import { changeRingtoneVolume } from "./audio";
+import { changeRingtoneVolume, initiateAudio } from "./audio";
 
 
 export default function pageload() {
     changeSelectedTime(parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25);
-    setBackground(localStorage.getItem('background'));
-    setPlaylist(localStorage.getItem('playlist'));
+    setBackground(localStorage.getItem('background') ? localStorage.getItem('background') : "starry_night");
+    setPlaylist(localStorage.getItem('playlist') ? localStorage.getItem('playlist') : 'lofi_chill');
+    initiateAudio(localStorage.getItem('alarm') ? localStorage.getItem('alarm') : 'standard')
     changeRingtoneVolume(localStorage.getItem('volume'));
 
     //enter modal input values from localStorage
@@ -21,3 +22,5 @@ export default function pageload() {
     document.getElementById('background-select').querySelector(`option[value='${localStorage.getItem('background')}']`).setAttribute('selected', true);
     document.getElementById('playlist-select').querySelector(`option[value='${localStorage.getItem('playlist')}']`).setAttribute('selected', true);
 }
+
+//Add Event Listener to this file (from main.js)
