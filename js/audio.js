@@ -35,7 +35,7 @@ export function changeRingtoneVolume(volume) {
 
 export function playRingtonePreview() {
     let currentValue = document.querySelector("#alarm-select").value;
-    let currentVolume = document.querySelector("#volume-range".value);
+    let currentVolume = document.querySelector("#volume-range").value;
     let previewPath = returnRingtonePath(currentValue);
 
     Preview.src = previewPath;

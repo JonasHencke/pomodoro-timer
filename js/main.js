@@ -7,6 +7,7 @@ import {
 import 'bootstrap';
 import saveChanges from "./save.js";
 import pageload from "./pageload.js";
+import { playRingtonePreview } from "./audio.js";
 
 // Timer buttons
 const playBtn = document.querySelector("#playBtn");
@@ -38,6 +39,10 @@ shortBreak.addEventListener("click", () => {
   changeSelectedTime(parseInt(localStorage.getItem('shortBreakLength')) ? localStorage.getItem('shortBreakLength') : 5);
   updateSelectBtns(shortBreak);
 });
+
+//modal buttons
+const previewAlarmBtn = document.querySelector('#alarmPreview');
+previewAlarmBtn.addEventListener('click', playRingtonePreview);
 
 // functions
 export function updateSelectBtns(selectedBtn) {
