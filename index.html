@@ -14,18 +14,20 @@
   <body class="position-relative">
     <div class="" id="app">
       <div class="d-flex flex-column align-items-center justify-content-center vh-100 gap-4">
-        <div class="buttongroup d-flex gap-3" id="selectBtns">
-          <button class="btn btn-primary rounded-4 fw-bold" id="pomodoroBtn">pomodoro</button>
-          <button class="btn rounded-4 fw-bold btn-outline-primary" id="shortBreak">short break</button>
-          <button class="btn rounded-4 fw-bold btn-outline-primary" id="longBreak">long break</button>
+        <div class="d-flex flex-column">
+          <div class="buttongroup d-flex gap-3" id="selectBtns">
+            <button class="btn btn-primary rounded-4 fw-bold" id="pomodoroBtn">pomodoro</button>
+            <button class="btn rounded-4 fw-bold btn-outline-primary" id="shortBreak">short break</button>
+            <button class="btn rounded-4 fw-bold btn-outline-primary" id="longBreak">long break</button>
+          </div>
+          <div class="timer display-1 fw-bold text-primary fw-bold display-flex text-center" id="timer"></div>
+          <div class="buttongroup d-flex gap-4 align-items-center justify-content-center">
+            <div class="fa-solid fa-play text-white" id="playBtn" style="font-size:calc(2rem + 2vw)" role="button"></div>
+            <div class="fa-solid fa-pause d-none text-white" id="pauseBtn" style="font-size:calc(2rem + 2vw)" role="button"></div>
+            <div class="fa-solid fa-arrows-rotate text-white" id="cancelBtn" style="font-size:calc(2rem + 1vw)" role="button"></div>
+          </div>
         </div>
-        <div class="timer display-1 fw-bold text-primary fw-bold" id="timer"></div>
-        <div class="buttongroup d-flex gap-4 align-items-center">
-          <div class="fa-solid fa-play text-white" id="playBtn" style="font-size:calc(2rem + 2vw)" role="button"></div>
-          <div class="fa-solid fa-pause d-none text-white" id="pauseBtn" style="font-size:calc(2rem + 2vw)" role="button"></div>
-          <div class="fa-solid fa-arrows-rotate text-white" id="cancelBtn" style="font-size:calc(2rem + 1vw)" role="button"></div>
-        </div>
-        <div id="playlistContainer" class="d-flex position-absolute hideplaylist" style="right:0px;bottom:3vh;transition:1000ms;">
+        <div id="playlistContainer" class="d-flex position-absolute hideplaylist" style="right:0px;bottom:20%;transition:1000ms;">
           <div class=" display-flex fa-brands fa-spotify text-white" style="left: 390px; bottom: 5vw; border-radius: 0px; min-width:50px; height: 80px; transition: 500ms; background-color: #282828; font-size:23px; margin-right:-16px; padding-top:30px; padding-left:12px; border-radius: 0.75em 0 0 0.75em" role="button"></div>
           <iframe class="" border-radius="0px" style="left: 0; bottom: 5vw; border-radius: 0px; transition: 300ms;" src="https://open.spotify.com/embed/playlist/1osCrUUV4UeTgYqM9oenvy?utm_source=generator&theme=0" height="80" width="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
