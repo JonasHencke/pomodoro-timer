@@ -1,8 +1,9 @@
-import { playAudio } from "./audio";
+import { playAudio, pauseAudio } from "./audio";
 export let timer;
 export let minutes = 25;
 export let seconds = 0;
 export let isPaused = true;
+let audioTimeout;
 let timeSelected = 25;
 let pomodoroLength = parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25;
 let shortBreakLength = parseInt(localStorage.getItem('shortBreakLength')) ? localStorage.getItem('shortBreakLength') : 5;
@@ -14,6 +15,10 @@ export function startTimer() {
         timer = setInterval(updateTimer, 1000);
         document.querySelector("#playBtn").classList.add('d-none');
         document.querySelector("#pauseBtn").classList.remove('d-none');
+        playAudio();
+        pauseAudio();
+
+        audioTimeout = setTimeout(() => {playAudio()}, (60 * minutes + seconds) * 1000);
     }
 }
 
@@ -22,6 +27,7 @@ export function pauseTimer() {
     clearInterval(timer);
     document.querySelector("#pauseBtn").classList.add('d-none');
     document.querySelector("#playBtn").classList.remove('d-none');
+    clearTimeout(audioTimeout);
 }
 
 export function resetTimer() {
@@ -36,7 +42,6 @@ export function resetTimer() {
 
 export function updateTimer() {
     if (minutes === 0 && seconds === 0) {
-        playAudio();
         resetTimer();
     } else if (seconds === 0) {
         minutes--;

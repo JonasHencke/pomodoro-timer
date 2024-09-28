@@ -43,6 +43,10 @@ export function playAudio() {
     Ringtone.play();
 };
 
+export function pauseAudio() {
+    Ringtone.pause()
+}
+
 export function changeRingtoneVolume(volume) {
     Ringtone.volume = volume / 100;
 };
