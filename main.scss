@@ -79,6 +79,10 @@ cursor:default;
   width: 90px;
 }
 
+.modal button {
+  font-size: 1rem;
+}
+
 @media only screen and (max-width: 575px) {
   .timer-input {
     width: 100%;
