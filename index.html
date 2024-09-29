@@ -33,14 +33,16 @@
         </div>
       </div>
     </div>
-    <div class="fa-solid fa-gear position-absolute text-white" id="settingsBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:calc(1.4em + 2vw);top:4vh;right:3vw;" role="button"></div>
-    <!-- Bootstrap Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="icons-right" class="position-absolute d-flex flex-column gap-4" style="font-size:calc(1.5em + 2vh);top:4vh;right:3vw;">
+      <div class="fa-solid fa-gear text-white" id="settingsBtn" data-bs-toggle="modal" data-bs-target="#settingsModal" role="button"></div>
+      <div class="fa-solid fa-circle-info text-white" id="infoBtn" data-bs-toggle="modal" data-bs-target="#infoModal" role="button"></div>
+    </div>
+    <!-- Settings Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title text-white fs-5 fw-bold" id="exampleModalLabel">Settings</h1>
-            <div type="button" class="fa-solid fa-xmark text-white" data-bs-dismiss="modal" aria-label="Close"></div>
+            <h1 class="modal-title text-white fs-5 fw-bold" id="settingsModalLabel">Settings</h1>
           </div>
           <div class="modal-body">
             <div>
@@ -117,7 +119,36 @@
         </div>
       </div>
     </div>
-    <!-- Bootstrap Modal end -->
+    <!-- Settings Modal end -->
+    <!-- Info Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-white fs-5 fw-bold" id="infoModalLabel">Information</h1>
+          </div>
+          <div class="modal-body">
+            <h5 class="mb-3">What is the Pomodoro Method?</h5>
+            <div>
+              The Pomodoro Method is a time management technique where work is broken into intervals, typically 25 minutes long, called "Pomodoros," followed by a 5-minute break. After completing four Pomodoros, a longer break (15-30 minutes) is taken.
+            </div>
+            <h5 class="mb-3 mt-4">Benefits:</h5>
+            <ul>
+              <li class="mb-3"><span class="fw-bold">Boosts focus:</span> By working in short bursts, it reduces distractions and increases concentration.</li>
+              <li class="mb-3"><span class="fw-bold">Prevents burnout: </span>Regular breaks help maintain mental energy and prevent fatigue.</li>
+              <li class="mb-3"><span class="fw-bold">Enhances productivity:</span> It encourages a structured workflow, making tasks feel more manageable.</li>
+              <li class="mb-3"><span class="fw-bold">Improves time awareness:</span> Tracking Pomodoros increases accountability and time management skills.</li>
+            </ul>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary rounded-4" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Info Modal end -->
+
   </body>
   <script type="module" src="./js/main.js" defer>
   </script>
