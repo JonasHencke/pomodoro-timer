@@ -7,7 +7,7 @@ let audioTimeout;
 let timeSelected = 25;
 let pomodoroLength = parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25;
 let shortBreakLength = parseInt(localStorage.getItem('shortBreakLength')) ? localStorage.getItem('shortBreakLength') : 5;
-let longBreakLength = parseInt(localStorage.getItem('longBreakLength')) ? localStorage.getItem('longBreakLength') : 10;
+let longBreakLength = parseInt(localStorage.getItem('longBreakLength')) ? localStorage.getItem('longBreakLength') : 15;
 
 export function startTimer() {
     if (isPaused) {

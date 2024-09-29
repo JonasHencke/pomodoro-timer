@@ -32,7 +32,7 @@ pomodoroBtn.addEventListener("click", () => {
     updateSelectBtns(pomodoroBtn);
   });
 longBreak.addEventListener("click", () => {
-    changeSelectedTime(parseInt(localStorage.getItem('longBreakLength')) ? localStorage.getItem('longBreakLength') : 10);
+    changeSelectedTime(parseInt(localStorage.getItem('longBreakLength')) ? localStorage.getItem('longBreakLength') : 15);
     updateSelectBtns(longBreak);
   });
 shortBreak.addEventListener("click", () => {
