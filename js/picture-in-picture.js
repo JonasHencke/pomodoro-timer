@@ -6,7 +6,10 @@ export default function preparePIP() {
     const player = document.querySelector('#player');
 
     pipButton.addEventListener('click', async () => {
-        const pipWindow = await documentPictureInPicture.requestWindow();
+        const pipWindow = await documentPictureInPicture.requestWindow({
+            width: "400",
+            height: "300", 
+          });
 
         //append all stylesheets
         [...document.styleSheets].forEach((styleSheet) => {
