@@ -47,7 +47,7 @@ previewAlarmBtn.addEventListener('click', playRingtonePreview);
 
 // functions
 export function updateSelectBtns(selectedBtn) {
-  document.querySelectorAll("#selectBtns > button").forEach((button) => {
+  [pomodoroBtn, longBreak, shortBreak].forEach((button) => {
     button.classList.add("btn-outline-primary");
     button.classList.remove("btn-primary");
   });
