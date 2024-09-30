@@ -8,13 +8,17 @@ let timeSelected = 25;
 let pomodoroLength = parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25;
 let shortBreakLength = parseInt(localStorage.getItem('shortBreakLength')) ? localStorage.getItem('shortBreakLength') : 5;
 let longBreakLength = parseInt(localStorage.getItem('longBreakLength')) ? localStorage.getItem('longBreakLength') : 15;
+let playBtn = document.querySelector("#playBtn");
+let pauseBtn = document.querySelector("#pauseBtn");
+let Timer = document.getElementById('timer');
+
 
 export function startTimer() {
     if (isPaused) {
         isPaused = false;
         timer = setInterval(updateTimer, 1000);
-        document.querySelector("#playBtn").classList.add('d-none');
-        document.querySelector("#pauseBtn").classList.remove('d-none');
+        playBtn.classList.add('d-none');
+        pauseBtn.classList.remove('d-none');
         playAudio();
         pauseAudio();
 
@@ -25,8 +29,8 @@ export function startTimer() {
 export function pauseTimer() {
     isPaused = true;
     clearInterval(timer);
-    document.querySelector("#pauseBtn").classList.add('d-none');
-    document.querySelector("#playBtn").classList.remove('d-none');
+    pauseBtn.classList.add('d-none');
+    playBtn.classList.remove('d-none');
     clearTimeout(audioTimeout);
 }
 
@@ -36,8 +40,8 @@ export function resetTimer() {
     minutes = timeSelected;
     seconds = 0;
     updateDisplay();
-    document.querySelector("#pauseBtn").classList.add('d-none');
-    document.querySelector("#playBtn").classList.remove('d-none');
+    pauseBtn.classList.add('d-none');
+    playBtn.classList.remove('d-none');
 }
 
 export function updateTimer() {
@@ -56,7 +60,7 @@ export function updateTimer() {
 export function updateDisplay() {
     const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
     const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
-    document.getElementById('timer').innerText = `${formattedMinutes}:${formattedSeconds}`;
+    Timer.innerText = `${formattedMinutes}:${formattedSeconds}`;
     document.title = `${formattedMinutes}:${formattedSeconds} | Studytimer`;
 };
 
