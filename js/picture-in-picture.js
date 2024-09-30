@@ -1,4 +1,5 @@
-import setBackground from "./background";
+import { returnBackgroundUrlString } from "./background";
+
 
 export default function preparePIP() {
     const pipButton = document.querySelector('#pipBtn');
@@ -44,7 +45,7 @@ export default function preparePIP() {
         // Move the player to the Picture-in-Picture window.
         pipWindow.document.body.append(player);
         //setBackground(localStorage.getItem('background'));
-        pipWindow.document.body.style.background = 'url(https://images.pexels.com/photos/5411700/pexels-photo-5411700.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) 50% center / cover no-repeat';
+        pipWindow.document.body.style.background = returnBackgroundUrlString(localStorage.getItem('background'));
 
         pipWindow.addEventListener('pagehide', () => {
             playerContainer.append(player);
