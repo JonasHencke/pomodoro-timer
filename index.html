@@ -13,9 +13,9 @@
   <link rel="stylesheet" href="main.scss" />
   <body class="position-relative">
     <div class="" id="app">
-      <div class="d-flex flex-column align-items-center justify-content-center vh-100 gap-4">
-        <div class="d-flex flex-column">
-          <div class="buttongroup d-flex gap-3" id="selectBtns">
+      <div id="playerContainer" class="d-flex flex-column align-items-center justify-content-center vh-100 gap-4">
+        <div id="player" class="d-flex flex-column vh-100 justify-content-center align-items-center">
+          <div class="buttongroup d-flex gap-3 justify-content-center" id="selectBtns">
             <button class="btn btn-primary rounded-4 fw-bold" id="pomodoroBtn">pomodoro</button>
             <button class="btn rounded-4 fw-bold btn-outline-primary" id="shortBreak">short break</button>
             <button class="btn rounded-4 fw-bold btn-outline-primary" id="longBreak">long break</button>
@@ -36,6 +36,7 @@
     <div id="icons-right" class="position-absolute d-flex flex-column gap-4" style="font-size:calc(1.5em + 2vh);top:4vh;right:3vw;">
       <div class="fa-solid fa-gear text-white" id="settingsBtn" data-bs-toggle="modal" data-bs-target="#settingsModal" role="button"></div>
       <div class="fa-solid fa-circle-info text-white" id="infoBtn" data-bs-toggle="modal" data-bs-target="#infoModal" role="button"></div>
+      <div class="fa-solid fa-window-restore text-white d-none" id="pipBtn" role="button"></div>
     </div>
     <!-- Settings Modal -->
     <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">

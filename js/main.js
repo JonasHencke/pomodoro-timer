@@ -8,6 +8,7 @@ import 'bootstrap';
 import saveChanges from "./save.js";
 import pageload from "./pageload.js";
 import { playRingtonePreview } from "./audio.js";
+import preparePIP from "./picture-in-picture.js";
 
 // Timer buttons
 const playBtn = document.querySelector("#playBtn");
@@ -62,4 +63,9 @@ playlistContainer.addEventListener('click', () => {
 
 saveBtn.addEventListener('click', saveChanges);
 
-pageload()
+pageload();
+
+if ('documentPictureInPicture' in window) {
+  preparePIP();
+  document.querySelector('#pipBtn').classList.remove('d-none');
+};
