@@ -37,6 +37,7 @@ export function pauseTimer() {
 export function resetTimer() {
     isPaused = true;
     clearInterval(timer);
+    clearTimeout(audioTimeout);
     minutes = timeSelected;
     seconds = 0;
     updateDisplay();
