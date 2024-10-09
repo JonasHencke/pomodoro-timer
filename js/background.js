@@ -15,7 +15,7 @@ export function returnBackgroundUrlString(name) {
         case 'jellyfish':
             return 'url("https://images.pexels.com/photos/2832767/pexels-photo-2832767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") center / cover no-repeat fixed ';
         case 'autumn':
-            return 'url("https://images.pexels.com/photos/1102912/pexels-photo-1102912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 25% center / cover no-repeat fixed';
+            return 'url("https://images.pexels.com/photos/28842787/pexels-photo-28842787/free-photo-of-heitere-norwegische-herbstlandschaft-mit-reflexionen.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 25% center / cover no-repeat fixed';
         case 'foggy_mountains':
             return 'url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 25% center / cover no-repeat fixed';
         case 'smooth_clouds':
@@ -26,8 +26,12 @@ export function returnBackgroundUrlString(name) {
             return 'url("https://images.pexels.com/photos/28570477/pexels-photo-28570477/free-photo-of-reflektierende-stadtlandschaft-bei-sonnenuntergang-mit-blick-auf-den-fluss.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 25% center / cover no-repeat fixed ';
         case 'waves':
             return 'url("https://images.pexels.com/photos/15272404/pexels-photo-15272404/free-photo-of-ufer-aufsicht-draufsicht-spritzen.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 25% center / cover no-repeat fixed ';
+        case 'vintage':
+            return 'url("https://images.pexels.com/photos/877971/pexels-photo-877971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 25% center / cover no-repeat fixed ';
         case 'lotus_flower':
             return 'url("https://images.pexels.com/photos/28579274/pexels-photo-28579274/free-photo-of-leuchtend-rosa-seerose-in-ruhigen-teich.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 25% center / cover no-repeat fixed ';
+        case 'library':
+            return 'url("https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 50% center / cover no-repeat fixed ';
         case 'ancient':
             return 'url("https://images.pexels.com/photos/2121549/pexels-photo-2121549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 50% center / cover no-repeat fixed ';
         default:
