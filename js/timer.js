@@ -1,4 +1,5 @@
 import { playAudio, pauseAudio } from "./audio";
+import { clearInterval, clearTimeout, setInterval, setTimeout } from 'worker-timers';
 export let timer;
 export let minutes = 25;
 export let seconds = 0;
