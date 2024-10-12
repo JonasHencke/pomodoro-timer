@@ -19,8 +19,8 @@ export default function pageload() {
 
     //select options from localStorage
     localStorage.getItem('alarm') && document.getElementById('alarm-select').querySelector(`option[value='${localStorage.getItem('alarm')}']`).setAttribute('selected', true);
-    localStorage.getItem('background') && document.getElementById('background-select').querySelector(`option[value='${localStorage.getItem('background')}']`).setAttribute('selected', true);
     localStorage.getItem('playlist') && document.getElementById('playlist-select').querySelector(`option[value='${localStorage.getItem('playlist')}']`).setAttribute('selected', true);
+    document.getElementById('background-select').querySelector(`option[value='${localStorage.getItem('background') ? localStorage.getItem('background') : "starry_night"}']`).setAttribute('selected', true);
 }
 
 //Add Event Listener to this file (from main.js)
