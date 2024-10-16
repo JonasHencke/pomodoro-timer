@@ -1,9 +1,8 @@
 import { playAudio, pauseAudio } from "./audio";
-import { clearInterval, clearTimeout, setInterval, setTimeout } from 'worker-timers';
+import { clearInterval, setInterval} from 'worker-timers';
 
 let isPaused = true;
 let timerInterval;
-let audioTimeout;
 
 //durations
 let minutes = 25;
@@ -24,8 +23,6 @@ export function startTimer() {
         pauseBtn.classList.remove('d-none');
         playAudio();
         pauseAudio();
-
-        audioTimeout = setTimeout(() => {playAudio()}, (60 * minutes + seconds) * 1000);
     }
 }
 
@@ -34,13 +31,11 @@ export function pauseTimer() {
     clearInterval(timerInterval);
     pauseBtn.classList.add('d-none');
     playBtn.classList.remove('d-none');
-    clearTimeout(audioTimeout);
 }
 
 export function resetTimer() {
     isPaused = true;
     clearInterval(timerInterval);
-    clearTimeout(audioTimeout);
     minutes = timeSelected;
     seconds = 0;
     updateDisplay();
@@ -51,6 +46,7 @@ export function resetTimer() {
 function updateTimer() {
     if (minutes === 0 && seconds === 0) {
         resetTimer();
+        playAudio();
     } else if (seconds === 0) {
         minutes--;
         seconds = 59;
