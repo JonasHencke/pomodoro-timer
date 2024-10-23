@@ -1,13 +1,12 @@
-import { playAudio, pauseAudio } from "./audio";
+import { playAudio } from "./audio";
 import { clearInterval, setInterval} from 'worker-timers';
 
 let isPaused = true;
 let timerInterval;
 
 //durations
-let minutes = 25;
-let seconds = 0;
-let timeSelected = 25;
+let seconds;
+let timeSelected;
 
 //DOM elements
 let playBtn = document.querySelector("#playBtn");
@@ -21,8 +20,6 @@ export function startTimer() {
         timerInterval = setInterval(updateTimer, 1000);
         playBtn.classList.add('d-none');
         pauseBtn.classList.remove('d-none');
-        playAudio();
-        pauseAudio();
     }
 }
 
@@ -36,20 +33,16 @@ export function pauseTimer() {
 export function resetTimer() {
     isPaused = true;
     clearInterval(timerInterval);
-    minutes = timeSelected;
-    seconds = 0;
+    seconds = timeSelected * 60;
     updateDisplay();
     pauseBtn.classList.add('d-none');
     playBtn.classList.remove('d-none');
 }
 
 function updateTimer() {
-    if (minutes === 0 && seconds === 0) {
+    if (seconds === 0) {
         resetTimer();
         playAudio();
-    } else if (seconds === 0) {
-        minutes--;
-        seconds = 59;
     } else {
         seconds--;
     }
@@ -58,8 +51,10 @@ function updateTimer() {
 }
 
 function updateDisplay() {
-    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
-    const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+    let displayMinutes = Math.floor(seconds / 60);
+    let displaySeconds = seconds % 60;
+    const formattedMinutes = displayMinutes < 10 ? '0' + displayMinutes : displayMinutes;
+    const formattedSeconds = displaySeconds < 10 ? '0' + displaySeconds : displaySeconds;
     Timer.innerText = `${formattedMinutes}:${formattedSeconds}`;
     document.title = `${formattedMinutes}:${formattedSeconds} | Studytimer`;
 };
@@ -67,8 +62,7 @@ function updateDisplay() {
 export function changeSelectedTime(length) {
     pauseTimer();
     timeSelected = length;
-    seconds = 0;
-    minutes = length;
+    seconds = length * 60;
 
     updateDisplay();
 }
