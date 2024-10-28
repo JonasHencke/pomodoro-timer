@@ -65,7 +65,7 @@ saveBtn.addEventListener('click', saveChanges);
 
 pageload();
 
-if ('documentPictureInPicture' in window) {
+if ('documentPictureInPicture' in window && window.self === window.top) {
   preparePIP();
   document.querySelector('#pipBtn').classList.remove('d-none');
 };
