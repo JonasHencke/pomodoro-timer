@@ -3,6 +3,7 @@ import { clearInterval, setInterval} from 'worker-timers';
 
 let isPaused = true;
 let timerInterval;
+let targetTime;
 
 //durations
 let seconds;
@@ -16,6 +17,7 @@ let Timer = document.getElementById('timer');
 //functions
 export function startTimer() {
     if (isPaused) {
+        targetTime = Date.now() + (seconds * 1000);
         isPaused = false;
         timerInterval = setInterval(updateTimer, 1000);
         playBtn.classList.add('d-none');
@@ -40,13 +42,14 @@ export function resetTimer() {
 }
 
 function updateTimer() {
-    if (seconds === 0) {
+    let now = Date.now();
+    seconds = Math.round((targetTime - now)/1000)
+
+    if (targetTime < now) {
         resetTimer();
         playAudio();
-    } else {
-        seconds--;
     }
-
+    
     updateDisplay();
 }
 
