@@ -4,8 +4,6 @@ import { clearInterval, setInterval} from 'worker-timers';
 let isPaused = true;
 let timerInterval;
 let targetTime;
-
-//durations
 let seconds;
 let timeSelected;
 
@@ -49,7 +47,7 @@ function updateTimer() {
         resetTimer();
         playAudio();
     }
-    
+
     updateDisplay();
 }
 
