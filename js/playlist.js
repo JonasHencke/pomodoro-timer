@@ -1,5 +1,5 @@
 export default function setPlaylist(name) {
-    let iframe = document.querySelector('iframe')
+    let iframe = document.querySelector('iframe');
 
     switch (name) {
         case 'lofi_chill':

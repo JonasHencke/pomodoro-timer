@@ -1,6 +1,5 @@
 import { returnBackgroundUrlString } from "./background";
 
-
 export default function preparePIP() {
     const pipButton = document.querySelector('#pipBtn');
     const playerContainer = document.querySelector('#playerContainer');

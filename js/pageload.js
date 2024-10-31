@@ -3,7 +3,6 @@ import setBackground from "./background";
 import setPlaylist from "./playlist";
 import { changeRingtoneVolume, initiateAudio } from "./audio";
 
-
 export default function pageload() {
     changeSelectedTime(parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25);
     setBackground(localStorage.getItem('background') ? localStorage.getItem('background') : "starry_night");
