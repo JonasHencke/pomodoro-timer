@@ -4,8 +4,20 @@ import setPlaylist from "./playlist";
 import { changeRingtoneVolume, initiateAudio } from "./audio";
 
 export default function pageload() {
+    //background settings
+    const urlObj = new URL(window.location.href);
+    const searchParams = Object.fromEntries(urlObj.searchParams.entries());
+
+    if(localStorage.getItem('background')) {
+        setBackground(localStorage.getItem('background'))
+    } else if(searchParams.theme) {
+        setBackground(searchParams.theme);
+    } else {
+        setBackground('starry_night');
+    }
+
+    //initialise settings
     changeSelectedTime(parseInt(localStorage.getItem('pomodoroLength')) ? localStorage.getItem('pomodoroLength') : 25);
-    setBackground(localStorage.getItem('background') ? localStorage.getItem('background') : "starry_night");
     setPlaylist(localStorage.getItem('playlist') ? localStorage.getItem('playlist') : 'lofi_chill');
     initiateAudio(localStorage.getItem('alarm') ? localStorage.getItem('alarm') : 'standard')
     changeRingtoneVolume(localStorage.getItem('volume'));
@@ -22,4 +34,4 @@ export default function pageload() {
     document.getElementById('background-select').querySelector(`option[value='${localStorage.getItem('background') ? localStorage.getItem('background') : "starry_night"}']`).setAttribute('selected', true);
 }
 
-//Add Event Listener to this file (from main.js)
+//TODO: Move Event Listener to this file (from main.js)
