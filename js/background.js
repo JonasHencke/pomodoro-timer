@@ -34,6 +34,12 @@ export function returnBackgroundUrlString(name) {
             return 'url("https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 50% center / cover no-repeat fixed ';
         case 'ancient':
             return 'url("https://images.pexels.com/photos/2121549/pexels-photo-2121549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 50% center / cover no-repeat fixed ';
+        case 'winter':
+            return 'url("https://images.pexels.com/photos/2403402/pexels-photo-2403402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 50% center / cover no-repeat fixed ';
+        case 'spring':
+            return 'url("https://images.pexels.com/photos/250716/pexels-photo-250716.jpeg") 50% center / cover no-repeat fixed ';
+        case 'summer':
+            return 'url("https://images.pexels.com/photos/1139541/pexels-photo-1139541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 50% center / cover no-repeat fixed ';
         default:
             return 'url(https://images.pexels.com/photos/1567069/pexels-photo-1567069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) 25% center / cover no-repeat fixed ';
         }
