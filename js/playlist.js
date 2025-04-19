@@ -11,6 +11,9 @@ export default function setPlaylist(name) {
         case 'dark_ambience':
             iframe.src = 'https://open.spotify.com/embed/playlist/5HqYovXbJpnCfUFk4519tE?utm_source=generator&theme=0';
             break;
+        case 'pokemon':
+            iframe.src = 'https://open.spotify.com/embed/playlist/2I94fR66nhtnDCuWuupcWq?utm_source=generator&theme=0';
+            break;    
         default:
             iframe.src = 'https://open.spotify.com/embed/playlist/1osCrUUV4UeTgYqM9oenvy?utm_source=generator&theme=0';
             break;
